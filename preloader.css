@@ -1,0 +1,23 @@
+.loader {
+    background: #000 url(images/infinity.gif) no-repeat center center;
+    background-size: contain; /* Ensures the GIF is scaled to fit within the container */
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    transition: opacity 0.9s ease, visibility 0s 1s; /* Smooth fade-out over 2.5s */
+    opacity: 1; /* Initially fully visible */
+    visibility: visible; /* Ensure it's visible initially */
+}
+
+/* Media query for mobile screens */
+@media only screen and (max-width: 768px) {
+    .loader {
+        background-size: 50%; /* Scale down the GIF to 50% of its container on smaller screens */
+    }
+}
+
+.loader--hidden {
+    opacity: 0; /* Fades out */
+    visibility: hidden; /* Hides after the opacity transition */
+}
