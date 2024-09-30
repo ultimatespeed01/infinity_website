@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Infy Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="preloader.css">
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="stylesheet" href="slide.css">
+
+</head>
+<body  class="bg-slate-950">
+<!-- Navbar Structure -->
+<nav class="fixed top-0 left-0 right-0 bg-gray-950 shadow z-20">
+    <div class="container mx-auto flex items-center justify-between px-4 py-3">
+        <!-- Logo -->
+        <img id="logoIcon" class="h-10 w-auto" src="images/logocolor.png" alt="Logo" />
+        <a href="#" class="text-2xl font-bold text-white">Infy</a>
+        <button
+            id="navbarToggler"
+            class="flex flex-col justify-center items-center w-10 h-10 bg-transparent border-none cursor-pointer focus:outline-none z-30"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="bar block w-6 h-[2px] bg-white transition-transform"></span>
+            <span class="bar block w-6 h-[2px] bg-white transition-opacity my-[3px]"></span>
+            <span class="bar block w-6 h-[2px] bg-white transition-transform"></span>
+        </button>
+    </div>
+
+    <!-- Collapsible Menu -->
+    <div
+        id="navbarNav"
+        class="absolute top-0 left-0 right-0 h-screen bg-gray-950 flex items-center justify-center transform -translate-y-full opacity-0 transition-transform duration-300 ease-in-out pointer-events-none z-10"
+    >
+        <ul class="flex flex-col items-center space-y-4 text-white text-lg text-center">
+            <li class="w-full border-b border-gray-500 py-2">
+                <a href="index.html" class="hover:text-green-400">Home</a>
+            </li>
+            <li class="w-full border-b border-gray-500 py-2">
+                <a href="about.html" class="hover:text-green-400">About Us</a>
+            </li>
+            <li class="w-full border-b border-gray-500 py-2">
+                <a href="services.html" class="hover:text-green-400">Services </a>
+            </li>
+            <li class="w-full border-b border-gray-500 py-2">
+                <a href="contact.html" class="hover:text-green-400">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<main>
+  <!-- <div class="loader"></div> -->
+    <div class="relative h-screen text-white overflow-hidden bg-[url('/images/background.mp4')] bg-cover bg-center">
+      <video autoplay loop muted class="absolute inset-0 w-full h-full object-cover">
+        <source src="images/background.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-black opacity-50 "></div>
+        
+        <div class="relative z-10 flex flex-col justify-center items-center h-full text-centerdelay-[200ms] duration-[500ms] [animation-iteration-count:infinite] taos:scale-[0.6] taos:opacity-0" data-taos-offset="500">
+          <div class="rounded-3xl backdrop-blur-md bg-white/10  px-16 py-16">
+          <h1 class="text-5xl font-bold leading-tight mb-2">Crafting Digital Success Stories</h1>
+          <h3 class="text-xl font-bold leading-tight px-16 mb-5">Innovative Strategies, Creative Solutions, Proven Results</h3>
+          <p class="text-sm text-gray-300 mb-8 px-12">We help small startups and brands to get better exposure through different social media channels.</p>
+          <a href="#" class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Get Started</a>
+          </div>
+        </div>
+      </div>
+    <div class="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl">
+
+        <!-- Image Column -->
+        <div class="w-full h-64 lg:w-1/2 lg:h-auto delay-[200ms] duration-[500ms] [animation-iteration-count:infinite] taos:scale-[0.6] taos:opacity-0" data-taos-offset="500">
+            <img class="h-full w-full object-cover" src="images/logocolor.png" alt="Winding mountain road">
+        </div>
+        <!-- Close Image Column -->
+    
+        <!-- Text Column -->
+        <div
+            class="max-w-lg rounded-3xl backdrop-blur-md bg-white/10 bg-white md:max-w-2xl md:z-10 md:shadow-lg md:absolute md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12 delay-[300ms] duration-[600ms] [animation-iteration-count:infinite] taos:scale-[0.6] taos:opacity-0" data-taos-offset="400">
+            <!-- Text Wrapper -->
+            <div class="flex flex-col p-12 md:px-16  ">
+                <h2 class="text-2xl font-medium uppercase text-white lg:text-4xl ">Your Digital Future, Our Expertise: Infy Delivers Excellence.</h2>
+                <p class="mt-4 text-white">
+                  At INFY DIGI SOLUTIONS, we help brands connect with their audiences by telling meaningful stories and driving impactful results.
+                </p>
+                <!-- Button Container -->
+                <div class="mt-8">
+                    <a href="#"
+                        class="inline-block w-full text-center text-lg font-medium text-gray-100 bg-green-600 border-solid border-2 border-gray-600 py-4 px-10 hover:bg-green-800 hover:shadow-md md:w-48">Read
+                        More</a>
+                </div>
+            </div>
+            <!-- Close Text Wrapper -->
+        </div>
+        <!-- Close Text Column -->
+    
+    </div>
+    
+    <!-- Video Background Wrapper -->
+     
+<div class="relative h-screen text-white overflow-hidden bg-cover bg-center">
+  <!-- Video Background -->
+  <video autoplay loop muted class="absolute inset-0 w-full h-full object-cover">
+    <source src="images/background.mp4" type="video/mp4">
+  </video>
+  <!-- Dark Overlay -->
+   
+  <div class="absolute inset-0 bg-black opacity-50"></div>
+
+  <div class="slide overflow-hidden px-20 py-10 relative bg-gray-950">
+    <div class="company-slide flex space-x-10 animate-slide">
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+      <img src="images/logocolor.png" class="h-12" />
+    </div>
+  </div>
+  
+  <!-- Content Section (With Video Background) -->
+  <div class="relative flex pt-12 px-6 md:px-20 items-center justify-center bg-hero md:h-screen overflow-hidden z-10">
+    <div class="flex flex-col gap-6 md:flex-row items-center max-w-8xl ">
+
+      <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow backdrop-blur-xl bg-white/10 dark:border-gray-700 delay-[200ms] duration-[500ms] [animation-iteration-count:infinite] taos:scale-[0.6] taos:opacity-0" data-taos-offset="500">
+        <img src="images/earth.svg" class="mx-auto h-10 w-auto">
+        <a href="#">
+          <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white text-center">
+            Web design
+          </h5>
+                  </a>
+        <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">We create visually stunning, responsive websites tailored to your brand’s unique identity. Our designs prioritize user experience to ensure seamless navigation and engagement.</p>
+    </div>
+    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow backdrop-blur-xl bg-white/10 dark:border-gray-700 delay-[300ms] duration-[500ms] [animation-iteration-count:infinite] taos:scale-[0.6] taos:opacity-0" data-taos-offset="500">
+      <img src="images/presentation.svg" class="mx-auto h-10 w-auto">
+      <a href="#">
+          <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white text-center">SEO</h5>
+      </a>
+      <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Boost your online visibility with our data-driven SEO strategies that drive traffic and improve search engine rankings. From keyword optimization to technical audits, we ensure your site stays ahead of the competition.</p>
+  </div>
+  <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow backdrop-blur-xl bg-white/10 dark:border-gray-700 delay-[300ms] duration-[500ms] [animation-iteration-count:infinite] taos:scale-[0.6] taos:opacity-0" data-taos-offset="500">
+    <img src="images/socialmedia.png" class="mx-auto h-10 w-auto">
+    <a href="#">
+        <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white text-center">Social Media Marketing</h5>
+    </a>
+    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400"> Engage and grow your audience with targeted social media campaigns that resonate with your brand’s voice. We manage everything from content creation to analytics for measurable success.</p>
+</div>
+<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow backdrop-blur-xl bg-white/10 dark:border-gray-700 delay-[200ms] duration-[500ms] [animation-iteration-count:infinite] taos:scale-[0.6] taos:opacity-0" data-taos-offset="500">
+  <img src="images/influencer.png" class="mx-auto h-10 w-auto">
+  <a href="#">
+      <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white text-center">Influencer Marketing</h5>
+  </a>
+  <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Leverage the power of influencers to authentically promote your brand to the right audience. We handle influencer partnerships, campaign execution, and performance tracking for optimal results.</p>
+</div>
+  </div>
+</div>
+
+    <section class="text-white body-font">
+        <div class="flex justify-center mt-10 text-xl font-regular">
+          What we offer
+        </div>
+        <div class="flex justify-center mt-10 text-3xl font-regular">
+          Where Strategy Meets Digital. Your Success Story Begins with Infy.
+        </div>
+      </section>
+      <br>
+      
+</main>
+<!-- JavaScript to Toggle the Navbar -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggler = document.getElementById('navbarToggler');
+        const navbar = document.getElementById('navbarNav');
+
+        // Toggle the menu visibility and the hamburger animation
+        toggler.addEventListener('click', function () {
+            toggler.classList.toggle('toggle-active');
+            navbar.classList.toggle('-translate-y-full');
+            navbar.classList.toggle('opacity-0');
+            navbar.classList.toggle('pointer-events-none');
+
+            // Toggle bar animations
+            const bars = toggler.querySelectorAll('.bar');
+            bars[0].classList.toggle('rotate-45');
+            bars[0].classList.toggle('translate-y-1.5');
+
+            bars[1].classList.toggle('opacity-0');
+
+            bars[2].classList.toggle('-rotate-45');
+            bars[2].classList.toggle('-translate-y-1.5');
+        });
+    });
+</script>
+<footer class="bg-slate-950">
+    <div class="container px-4 mx-auto">
+      <div class="pt-24 pb-11 mx-auto max-w-4xl"><a class="block md:mx-auto mb-5 max-w-max" href="#">
+        <img src="images/logocolor.png" alt="Logo" width="175" height="40">
+
+        </a>
+        <div class="flex flex-wrap justify-center -mx-3 lg:-mx-6">
+          <div class="w-full md:w-auto p-3 md:px-6"><a href="index.html"
+              class="inline-block text-lg text-gray-500 hover:text-gray-600 font-medium">Home</a>
+          </div>
+          <div class="w-full md:w-auto p-3 md:px-6"><a
+            class="inline-block text-lg text-gray-500 hover:text-gray-600 font-medium" href="about.html">About US</a>
+        </div>
+                  <div class="w-full md:w-auto p-3 md:px-6"><a
+            class="inline-block text-lg text-gray-500 hover:text-gray-600 font-medium" href="services.html">Services</a>
+        </div>
+          <div class="w-full md:w-auto p-3 md:px-6"><a
+              class="inline-block text-lg text-gray-500 hover:text-gray-600 font-medium" href="contact.html">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-b border-gray-100"></div>
+    <div class="container px-4 mx-auto">
+      <p class="py-1 md:pb-2 text-md text-gray-400 font-medium text-center">
+        © 2024 Infinity Creative Studio 
+        All rights reserved.
+      </p>
+    </div>
+  </footer>
+  <script src="preloader.js"></script>
+<script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+</body>
+</html>
