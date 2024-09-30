@@ -137,3 +137,12 @@
         .carousel-item{
     transition: transform 1s ease, opacity .5s ease-out;
 }
+.video-background {
+  position: fixed;        /* Fixed position to cover the background */
+  top: 0;                 /* Align to the top of the viewport */
+  left: 0;                /* Align to the left of the viewport */
+  width: 100%;            /* Full width of the viewport */
+  height: 100%;           /* Full height of the viewport */
+  object-fit: cover;      /* Ensures video covers without distortion */
+  z-index: -1;            /* Send the video behind the content */
+}
