@@ -3,17 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Infinity</title>
+    <title>Welcome to Infy Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="preloader.css">
+    <script>document.documentElement.classList.add('js')</script>
 
+<style>
+/* Custom border gradient */
+.border-gradient {
+    background: linear-gradient(25deg, #ff0099, #6a00ff, #000000, #ffffff);
+    background-size: 400%;
+    padding: 5px; /* Space for the gradient border */
+}
+   
+.border-gradient .inner-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+}
+.card{
+  margin: 0 auto;
+  padding: 2em;
+  width: 300px;
+  background: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card::after, .card::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.card::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
+
+      </style>
 </head>
-<body>
+<body  class="bg-slate-950">
 <!-- Navbar Structure -->
-<nav class="fixed top-0 left-0 right-0 bg-white shadow z-20">
+<nav class="fixed top-0 left-0 right-0 bg-gray-950 shadow z-20">
     <div class="container mx-auto flex items-center justify-between px-4 py-3">
         <!-- Logo -->
-        <img id="logoIcon" class="h-10 w-auto" src="/images/black.png" alt="Logo" />
-        <a href="#" class="text-2xl font-bold">Infinity</a>
+        <img id="logoIcon" class="h-10 w-auto" src="images/logocolor.png" alt="Logo" />
+        <a href="#" class="text-2xl font-bold text-white">Infy</a>
         <button
             id="navbarToggler"
             class="flex flex-col justify-center items-center w-10 h-10 bg-transparent border-none cursor-pointer focus:outline-none z-30"
@@ -21,16 +80,16 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
         >
-            <span class="bar block w-6 h-[2px] bg-black transition-transform"></span>
-            <span class="bar block w-6 h-[2px] bg-black transition-opacity my-[3px]"></span>
-            <span class="bar block w-6 h-[2px] bg-black transition-transform"></span>
+            <span class="bar block w-6 h-[2px] bg-white transition-transform"></span>
+            <span class="bar block w-6 h-[2px] bg-white transition-opacity my-[3px]"></span>
+            <span class="bar block w-6 h-[2px] bg-white transition-transform"></span>
         </button>
     </div>
 
     <!-- Collapsible Menu -->
     <div
         id="navbarNav"
-        class="absolute top-0 left-0 right-0 h-screen bg-gray-800 flex items-center justify-center transform -translate-y-full opacity-0 transition-transform duration-300 ease-in-out pointer-events-none z-10"
+        class="absolute top-0 left-0 right-0 h-screen bg-gray-950 flex items-center justify-center transform -translate-y-full opacity-0 transition-transform duration-300 ease-in-out pointer-events-none z-10"
     >
         <ul class="flex flex-col items-center space-y-4 text-white text-lg text-center">
             <li class="w-full border-b border-gray-500 py-2">
@@ -48,9 +107,44 @@
         </ul>
     </div>
 </nav>
-<main>
-    
-</main>
+
+<section id="about-intro">
+    <div class="card"></div>
+    <h1>Animate Borders</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ad exercitationem voluptatem ullam et, natus impedit quae veniam optio a doloremque officiis beatae, itaque nesciunt nostrum quasi molestiae laudantium dolor asperiores soluta sint sed ratione cupiditate. Laudantium earum reiciendis enim.</p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- JavaScript to Toggle the Navbar -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -76,10 +170,10 @@
         });
     });
 </script>
-<footer class="bg-white">
+<footer class="bg-slate-950">
     <div class="container px-4 mx-auto">
       <div class="pt-24 pb-11 mx-auto max-w-4xl"><a class="block md:mx-auto mb-5 max-w-max" href="#">
-        <img src="images/logo_color.png" alt="Logo" width="175" height="40">
+        <img src="images/logocolor.png" alt="Logo" width="175" height="40">
 
         </a>
         <div class="flex flex-wrap justify-center -mx-3 lg:-mx-6">
@@ -100,11 +194,13 @@
     </div>
     <div class="border-b border-gray-100"></div>
     <div class="container px-4 mx-auto">
-      <p class="py-10 md:pb-20 text-md text-gray-400 font-medium text-center">
+      <p class="py-1 md:pb-2 text-md text-gray-400 font-medium text-center">
         © 2024 Infinity Creative Studio 
         All rights reserved.
       </p>
     </div>
   </footer>
+  <script src="preloader.js"></script>
+<script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
 </body>
 </html>
