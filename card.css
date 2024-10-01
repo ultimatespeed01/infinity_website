@@ -1,8 +1,15 @@
 
+body{
+   background: #0b0d15;
+  color: #a2a5b3;
+  align-content: center;
+}
+h1{
+  color: white;
+}
 .card{
-  background: #000000;
+  background: #1c1f2b;
   text-align: center;
-  border-radius: 10px;
   position: relative;
 }
 
@@ -23,12 +30,12 @@
   translate: -50% -50%;
   z-index: -1;
   padding: 3px;
-  border-radius: 10px;
+  border-radius: 24px;
   animation: 3s spin linear infinite;
 }
 .card::before{
   filter: blur(1.5rem);
-  opacity: 0.6;
+  opacity: 0.9;
 }
 @keyframes spin{
   from{
