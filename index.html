@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Welcome to Infy Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -13,67 +13,74 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="gradient.css">
+    <meta name="description" content="Infy Studio provides top-notch digital solutions like Web Design, SEO, Social Media Marketing, and Influencer Marketing.">
+    <meta name="keywords" content="Web Design, SEO, Social Media Marketing, Influencer Marketing, Digital Solutions">
+    <meta name="author" content="Infy Studio">
+<style>
+  html, body {
+    overflow-x: hidden;  /* This prevents horizontal scrolling */
+}
+* {
+    max-width: 100vw;
+    box-sizing: border-box;
+}
 
+</style>    
 </head>
 <body  class="bg-slate-950">
 <!-- Navbar Structure -->
-<nav class="fixed top-0 left-0 right-0 bg-gray-950 shadow z-20">
-    <div class="container mx-auto flex items-center justify-between px-4 py-3">
-        <!-- Logo -->
-        <img id="logoIcon" class="h-10 w-auto" src="images/logo.png" alt="Logo" />
-        <a href="#" class="text-2xl font-bold text-white">Infy</a>
-        <button
-            id="navbarToggler"
-            class="flex flex-col justify-center items-center w-10 h-10 bg-transparent border-none cursor-pointer focus:outline-none z-30"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
-            <span class="bar block w-6 h-[2px] bg-white transition-transform"></span>
-            <span class="bar block w-6 h-[2px] bg-white transition-opacity my-[3px]"></span>
-            <span class="bar block w-6 h-[2px] bg-white transition-transform"></span>
-        </button>
-    </div>
+<nav class="fixed top-0 left-0 right-0 bg-gray-950 shadow z-20 w-full">
+  <div class="container mx-auto flex items-center justify-between px-4 py-3 flex-wrap w-full">
+      <!-- Logo -->
+      <img id="logoIcon" class="h-16 w-auto" src="images/logo.png" alt="Logo" />
+      <a href="#" class="text-2xl font-bold text-white">INFY</a>
+      <button id="navbarToggler" class="flex flex-col justify-center items-center w-10 h-10 bg-transparent border-none cursor-pointer focus:outline-none z-30" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="bar block w-6 h-[2px] bg-white transition-transform"></span>
+          <span class="bar block w-6 h-[2px] bg-white transition-opacity my-[3px]"></span>
+          <span class="bar block w-6 h-[2px] bg-white transition-transform"></span>
+      </button>
+  </div>
 
-    <!-- Collapsible Menu -->
-    <div
-        id="navbarNav"
-        class="absolute top-0 left-0 right-0 h-screen bg-gray-950 flex items-center justify-center transform -translate-y-full opacity-0 transition-transform duration-300 ease-in-out pointer-events-none z-10"
-    >
-        <ul class="flex flex-col items-center space-y-4 text-white text-lg text-center">
-            <li class="w-full border-b border-gray-500 py-2">
-                <a href="index.html" class="hover:text-green-400">Home</a>
-            </li>
-            <li class="w-full border-b border-gray-500 py-2">
-                <a href="about.html" class="hover:text-green-400">About Us</a>
-            </li>
-            <li class="w-full border-b border-gray-500 py-2">
-                <a href="services.html" class="hover:text-green-400">Services </a>
-            </li>
-            <li class="w-full border-b border-gray-500 py-2">
-                <a href="contact.html" class="hover:text-green-400">Contact</a>
-            </li>
-        </ul>
-    </div>
+  <div id="navbarNav" class="absolute top-0 left-0 right-0 h-screen bg-gray-950 flex items-center justify-center transform -translate-y-full opacity-0 transition-transform duration-300 ease-in-out pointer-events-none z-10">
+      <ul class="flex flex-col items-center space-y-4 text-white text-lg text-center w-full">
+          <li class="w-full border-b border-gray-500 py-2">
+              <a href="index.html" class="hover:text-blue-400">Home</a>
+          </li>
+          <li class="w-full border-b border-gray-500 py-2">
+              <a href="about.html" class="hover:text-blue-400">About Us</a>
+          </li>
+          <li class="w-full border-b border-gray-500 py-2">
+              <a href="services.html" class="hover:text-blue-400">Services</a>
+          </li>
+          <li class="w-full border-b border-gray-500 py-2">
+              <a href="contact.html" class="hover:text-blue-400">Contact</a>
+          </li>
+      </ul>
+  </div>
 </nav>
+
+
 <main>
   <!-- <div class="loader"></div> -->
-    <div class="relative h-screen text-white overflow-hidden bg-[url('/images/background.mp4')] bg-cover bg-center">
-      <video autoplay loop muted class="absolute inset-0 w-full h-full object-cover">
+  <div class="relative text-white overflow-hidden bg-[url('/images/background.mp4')] bg-cover bg-center h-[70vh] sm:h-screen">
+    <video autoplay loop muted class="absolute inset-0 w-full h-full object-cover">
         <source src="images/background2.mp4" type="video/mp4">
     </video>
     <div class="absolute inset-0 bg-black opacity-50"></div>
-        
-        <div class="relative z-10 flex flex-col justify-center items-center h-full text-center" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">
-          <div class="rounded-3xl backdrop-blur-md bg-white/10  py-16">
-          <h1 class="text-center text-5xl font-bold leading-tight mb-2  custom-animated-text">WE GROW BRANDS</h1>
-          <h3 class="text-center mx-36 text-xl font-bold leading-tight mb-5 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">CREATE EXPERIENCES, SOLVE BUSINESS PROBLEMS</h3>
-          <br>
-          <p class="text-center mx-8 text-sm text-gray-300 mb-8 px-12 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">We help small startups and brands to get better exposure through different social media channels.</p>
-          <br>
-          </div>
+
+    <div class="relative z-10 flex flex-col justify-center items-center h-full text-center px-4 sm:px-8" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">
+        <div class="rounded-3xl backdrop-blur-md bg-white/10 py-8 sm:py-16 max-w-3xl w-full sm:w-auto">
+            <h1 class="text-2xl sm:text-5xl font-bold leading-tight mb-2 custom-animated-text">WE GROW BRANDS</h1>
+            <h3 class="text-lg sm:text-2xl font-bold leading-tight mb-4 sm:mb-5 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+                CREATE EXPERIENCES, SOLVE BUSINESS PROBLEMS
+            </h3>
+            <p class="text-xs sm:text-base text-gray-300 mb-6 sm:mb-8 px-4 sm:px-12">
+                We help small startups and brands to get better exposure through different social media channels.
+            </p>
         </div>
-      </div>
+    </div>
+</div>
+
       <div class="relative flex flex-col items-center mx-auto lg:flex-row lg:max-w-5xl lg:mt-12 xl:max-w-6xl">
 
         <!-- Image Column -->
@@ -96,87 +103,80 @@
         <!-- Close Text Column -->
     
     </div>
-    <div class="flex justify-center pt-9 "> <!-- Added flex and justify-end to align to the right -->
-      <div class="rounded-3xl backdrop-blur-md bg-white/10 bg-white md:max-w-2xl  lg:ml-8 xl:ml-16 p-1 lg:p-3" data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000">
-          <!-- Text Wrapper -->
-          <div class="flex-col">
-              <h2 class="text-xl font-medium uppercase text-white lg:text-4xl break-words">Our Services</h2> <!-- Added break-words for wrapping -->
-          </div>
-      </div>
-  </div>
-  
       <!-- Close Text Wrapper -->
   </div>
-    <div class="flex items-center justify-center min-h-screen bg-gray-950">
-      <article class="relative w-80 shadow-lg transition-shadow duration-500 hover:shadow-2xl overflow-hidden group bg-blue-300 hover:bg-blue-400" data-aos="fade-right"
-      data-aos-offset="300"
-      data-aos-easing="ease-in-sine"> 
-          <header class="flex items-center justify-center h-32 transition-all duration-500">
-              <img src="images/earth.svg"
-                   class="h-24 w-auto object-cover transition-transform duration-500 hover:scale-110" alt="Ice Cream Sundae Party"/>
-          </header>
-  
-          <div class="p-5 transition-all duration-500">
-              <h2 class="text-center text-lg font-bold text-black mb-2">
-                  Web design
-              </h2>
-              <p class="text-gray-950 line-clamp-3 opacity-0 transition-opacity duration-500 group-hover:opacity-100 max-h-0 group-hover:max-h-24 group-hover:delay-2000">
-                  We create visually stunning, responsive websites tailored to your brand’s unique identity. Our designs prioritize user experience to ensure seamless navigation and engagement.
-              </p>
-          </div>
-      </article>
-      <br>
-      <article class="m-8 relative w-80 shadow-lg transition-shadow duration-500 hover:shadow-2xl overflow-hidden group bg-red-400 hover:bg-red-600" data-aos="fade-right"
-      data-aos-offset="300"
-      data-aos-easing="ease-in-sine"> 
-          <header class="flex items-center justify-center h-32 transition-all duration-500">
-              <img src="images/presentation.svg"
-                   class="h-24 w-auto object-cover transition-transform duration-500 hover:scale-110" alt="Ice Cream Sundae Party"/>
-          </header>
-  
-          <div class="p-5 transition-all duration-500">
-              <h2 class="text-center text-lg font-bold text-black mb-2">
-                  SEO
-              </h2>
-              <p class="text-white line-clamp-3 opacity-0 transition-opacity duration-500 group-hover:opacity-100 max-h-0 group-hover:max-h-24 group-hover:delay-2000">
-                Boost your online visibility with our data-driven SEO strategies that drive traffic and improve search engine rankings. From keyword optimization to technical audits, we ensure your site stays ahead of the competition.              </p>
-          </div>
-      </article>
-      <br>
-      <article class="relative w-80 shadow-lg transition-shadow duration-500 hover:shadow-2xl overflow-hidden group bg-yellow-300 hover:bg-yellow-400" data-aos="fade-left"
-      data-aos-offset="300"
-      data-aos-easing="ease-in-sine"> 
-          <header class="flex items-center justify-center h-32 transition-all duration-500">
-              <img src="images/socialmedia.png"
-                   class="h-24 w-auto object-cover transition-transform duration-500 hover:scale-110" alt="Ice Cream Sundae Party"/>
-          </header>
-  
-          <div class="p-5 transition-all duration-500">
-              <h2 class="text-center text-lg font-bold text-black mb-2">
-                Social Media Marketing
-              </h2>
-              <p class="text-gray-950 line-clamp-3 opacity-0 transition-opacity duration-500 group-hover:opacity-100 max-h-0 group-hover:max-h-24 group-hover:delay-2000">
-                Engage and grow your audience with targeted social media campaigns that resonate with your brand’s voice. We manage everything from content creation to analytics for measurable success.              </p>
-          </div>
-      </article>
-      <br>
-      <article class="m-8 relative w-80 shadow-lg transition-shadow duration-500 hover:shadow-2xl overflow-hidden group bg-green-300 hover:bg-green-400" data-aos="fade-left"
-      data-aos-offset="300"
-      data-aos-easing="ease-in-sine"> 
-          <header class="flex items-center justify-center h-32 transition-all duration-500">
-              <img src="images/influencer.png"
-                   class="h-24 w-auto object-cover transition-transform duration-500 hover:scale-110" alt="Ice Cream Sundae Party"/>
-          </header>
-  
-          <div class="p-5 transition-all duration-500">
-              <h2 class="text-center text-lg font-bold text-black mb-2">
-                Influencer Marketing
-              </h2>
-              <p class="text-gray-950 line-clamp-3 opacity-0 transition-opacity duration-500 group-hover:opacity-100 max-h-0 group-hover:max-h-24 group-hover:delay-2000">
-                Leverage the power of influencers to authentically promote your brand to the right audience. We handle influencer partnerships, campaign execution, and performance tracking for optimal results.              </p>
-          </div>
-      </article>
-  </div>
+  <div class="flex justify-center pt-9 "> <!-- Added flex and justify-end to align to the right -->
+    <div class="rounded-3xl backdrop-blur-md bg-white/10 bg-white md:max-w-2xl  lg:ml-8 xl:ml-16 p-1 lg:p-3" data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000">
+        <!-- Text Wrapper -->
+        <div class="flex-col">
+            <h2 class="text-xl font-medium uppercase text-white lg:text-4xl break-words">Our Services</h2> <!-- Added break-words for wrapping -->
+        </div>
+    </div>
+</div>
+<div class="flex flex-wrap items-center justify-center min-h-screen bg-gray-950 px-4 w-full">
+  <article class="relative w-full sm:w-56 md:w-80 shadow-lg transition-shadow duration-500 hover:shadow-2xl overflow-hidden group bg-blue-300 hover:bg-blue-400 m-4" data-aos="fade-right"
+  data-aos-offset="300" data-aos-easing="ease-in-sine">
+    <header class="flex items-center justify-center h-32 transition-all duration-500">
+      <img src="images/earth.svg" class="h-24 w-auto object-cover transition-transform duration-500 hover:scale-110" alt="Web Design" />
+    </header>
+    <div class="p-5 transition-all duration-500">
+      <h2 class="text-center text-lg font-bold text-black mb-2">
+        Web Design
+      </h2>
+      <p class="text-gray-950 line-clamp-3 opacity-0 transition-opacity duration-500 group-hover:opacity-100 max-h-0 group-hover:max-h-24 group-hover:delay-2000">
+        We create visually stunning, responsive websites tailored to your brand’s unique identity. Our designs prioritize user experience to ensure seamless navigation and engagement.
+      </p>
+    </div>
+  </article>
+
+  <article class="relative w-full sm:w-56 md:w-80 shadow-lg transition-shadow duration-500 hover:shadow-2xl overflow-hidden group bg-red-400 hover:bg-red-600 m-4" data-aos="fade-right"
+  data-aos-offset="300" data-aos-easing="ease-in-sine">
+    <header class="flex items-center justify-center h-32 transition-all duration-500">
+      <img src="images/presentation.svg" class="h-24 w-auto object-cover transition-transform duration-500 hover:scale-110" alt="SEO" />
+    </header>
+    <div class="p-5 transition-all duration-500">
+      <h2 class="text-center text-lg font-bold text-black mb-2">
+        SEO
+      </h2>
+      <p class="text-white line-clamp-3 opacity-0 transition-opacity duration-500 group-hover:opacity-100 max-h-0 group-hover:max-h-24 group-hover:delay-2000">
+        Boost your online visibility with our data-driven SEO strategies that drive traffic and improve search engine rankings. From keyword optimization to technical audits, we ensure your site stays ahead of the competition.
+      </p>
+    </div>
+  </article>
+
+  <article class="relative w-full sm:w-56 md:w-80 shadow-lg transition-shadow duration-500 hover:shadow-2xl overflow-hidden group bg-yellow-300 hover:bg-yellow-400 m-4" data-aos="fade-left"
+  data-aos-offset="300" data-aos-easing="ease-in-sine">
+    <header class="flex items-center justify-center h-32 transition-all duration-500">
+      <img src="images/socialmedia.png" class="h-24 w-auto object-cover transition-transform duration-500 hover:scale-110" alt="Social Media Marketing" />
+    </header>
+    <div class="p-5 transition-all duration-500">
+      <h2 class="text-center text-lg font-bold text-black mb-2">
+        Social Media Marketing
+      </h2>
+      <p class="text-gray-950 line-clamp-3 opacity-0 transition-opacity duration-500 group-hover:opacity-100 max-h-0 group-hover:max-h-24 group-hover:delay-2000">
+        Engage and grow your audience with targeted social media campaigns that resonate with your brand’s voice. We manage everything from content creation to analytics for measurable success.
+      </p>
+    </div>
+  </article>
+
+  <article class="relative w-full sm:w-56 md:w-80 shadow-lg transition-shadow duration-500 hover:shadow-2xl overflow-hidden group bg-green-300 hover:bg-green-400 m-4" data-aos="fade-left"
+  data-aos-offset="300" data-aos-easing="ease-in-sine">
+    <header class="flex items-center justify-center h-32 transition-all duration-500">
+      <img src="images/influencer.png" class="h-24 w-auto object-cover transition-transform duration-500 hover:scale-110" alt="Influencer Marketing" />
+    </header>
+    <div class="p-5 transition-all duration-500">
+      <h2 class="text-center text-lg font-bold text-black mb-2">
+        Influencer Marketing
+      </h2>
+      <p class="text-gray-950 line-clamp-3 opacity-0 transition-opacity duration-500 group-hover:opacity-100 max-h-0 group-hover:max-h-24 group-hover:delay-2000">
+        Leverage the power of influencers to authentically promote your brand to the right audience. We handle influencer partnerships, campaign execution, and performance tracking for optimal results.
+      </p>
+    </div>
+  </article>
+</div>
+
+
+
   
   
   
@@ -188,85 +188,74 @@
     
     <!-- Video Background Wrapper -->
      
-<div class="relative h-screen text-white overflow-hidden bg-cover bg-center">
-  <!-- Video Background -->
-  <video autoplay loop muted class="absolute inset-0 w-full h-full object-cover">
-    <source src="images/background2.mp4" type="video/mp4">
-  </video>
-  <div class=" h-full relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl">
-
-    <!-- Image Column -->
-    <div class="w-full h-64 lg:w-1/2 lg:h-auto " data-aos="zoom-in-up" data-aos-delay="50" data-aos-duration="1000">
-        <img class="h-full w-full object-cover" src="images/logocolor.png" alt="Winding mountain road">
-    </div>
-    <!-- Close Image Column -->
-
-    <!-- Text Column -->
-    <div
-        class="max-w-lg rounded-3xl backdrop-blur-md bg-white/10 bg-white md:max-w-2xl md:z-10 md:shadow-lg md:absolute md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12 " data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">
-        <!-- Text Wrapper -->
-        <div class="flex flex-col p-12 md:px-16  ">
-            <h2 class="text-2xl font-medium uppercase text-white lg:text-4xl ">Your Digital Future, Our Expertise: Infy Delivers Excellence.</h2>
-            <p class="mt-4 text-white">
+    <div class="relative min-h-screen text-white overflow-hidden bg-cover bg-center">
+      <!-- Video Background -->
+      <video autoplay loop muted class="absolute inset-0 w-full h-full object-cover">
+        <source src="images/background2.mp4" type="video/mp4">
+      </video>
+    
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+    
+      <!-- Content Wrapper -->
+      <div class="min-h-screen relative flex flex-col items-center justify-center mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-6 md:px-8 py-8">
+        
+        <!-- Image Column -->
+        <div class="w-full h-auto mb-4 lg:mb-8" data-aos="zoom-in-up" data-aos-delay="50" data-aos-duration="1000">
+          <img class="h-auto w-full max-h-48 sm:max-h-64 lg:max-h-96 object-contain" src="images/logocolor.png" alt="Logo">
+        </div>
+    
+        <!-- Text Column -->
+        <div class="w-full max-w-full sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl rounded-3xl backdrop-blur-md bg-white/10 p-4 sm:p-6 md:p-8 md:shadow-lg"
+          data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
+          <div class="flex flex-col">
+            <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium uppercase text-white text-center">Your Digital Future, Our Expertise: Infy Delivers Excellence.</h2>
+            <p class="mt-4 text-sm sm:text-base md:text-lg text-white text-center">
               At INFY DIGI SOLUTIONS, we help brands connect with their audiences by telling meaningful stories and driving impactful results.
             </p>
+          </div>
         </div>
-        <!-- Close Text Wrapper -->
+      </div>
     </div>
-    <!-- Close Text Column -->
-
-  </div>
-  <!-- Dark Overlay -->
-</div>
-  <div class="absolute inset-0 bg-black opacity-50"></div>
-
-  <div class="slide overflow-hidden px-20 py-10 relative bg-gray-950">
-    <div class="company-slide flex space-x-10 animate-slide">
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
-      <img src="images/logocolor.png" class="h-12" />
+    
+    <!-- Sliding Logos Section -->
+    <div class="slide overflow-hidden px-4 sm:px-10 md:px-20 py-4 sm:py-6 md:py-8 relative bg-gray-950">
+      <div class="company-slide flex space-x-4 sm:space-x-6 md:space-x-8 animate-slide">
+        <img src="images/logocolor.png" class="h-6 sm:h-8 md:h-10" />
+        <img src="images/logocolor.png" class="h-6 sm:h-8 md:h-10" />
+        <img src="images/logocolor.png" class="h-6 sm:h-8 md:h-10" />
+        <img src="images/logocolor.png" class="h-6 sm:h-8 md:h-10" />
+        <img src="images/logocolor.png" class="h-6 sm:h-8 md:h-10" />
+        <img src="images/logocolor.png" class="h-6 sm:h-8 md:h-10" />
+        <img src="images/logocolor.png" class="h-6 sm:h-8 md:h-10" />
+        <img src="images/logocolor.png" class="h-6 sm:h-8 md:h-10" />
+        <img src="images/logocolor.png" class="h-6 sm:h-8 md:h-10" />
+        <img src="images/logocolor.png" class="h-6 sm:h-8 md:h-10" />
+        <img src="images/logocolor.png" class="h-6 sm:h-8 md:h-10" />
+        <img src="images/logocolor.png" class="h-6 sm:h-8 md:h-10" />
+        <!-- ... (remaining images) ... -->
+      </div>
     </div>
-  </div>
+    
+    
   
   <!-- Content Section (With Video Background) -->
-  <div class="relative flex items-center justify-center bg-hero md:h-screen overflow-hidden z-10 pt-12 px-6 md:px-20" style="background-image: url('images/bulb2.jpg'); background-size: cover; background-position: center;">
-    <section class="shadow-lg py-8 px-9 rounded-3xl backdrop-blur-md bg-white/10 bg-white absolute text-white body-font text-center" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">
-      <div class="flex justify-center text-3xl font-regular">
-        Where Strategy Meets Digital. <br>
-        Your Success Story Begins with Infy.
-      </div>
-    </section>
-  </div>
+  <div class="relative flex items-center justify-center bg-hero md:h-screen h-72 overflow-hidden z-10 pt-8 sm:pt-12 px-4 sm:px-6 md:px-20" 
+     style="background-image: url('images/bulb2.jpg'); background-size: cover; background-position: center;">
   
+  <!-- Section Container -->
+  <section class="shadow-lg py-6 px-6 sm:py-8 sm:px-8 rounded-3xl backdrop-blur-md bg-white/10 bg-white absolute text-white body-font text-center max-w-xs sm:max-w-md md:max-w-lg"
+           data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">
+    
+    <!-- Text Content -->
+    <div class="flex justify-center text-lg sm:text-xl md:text-3xl font-regular leading-snug">
+      Where Strategy Meets Digital. <br>
+      Your Success Story Begins with Infy.
+    </div>
+
+  </section>
+</div>
+
 
    
       <br>
