@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Infinity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+<!-- Navbar Structure -->
+<nav class="fixed top-0 left-0 right-0 bg-white shadow z-20">
+    <div class="container mx-auto flex items-center justify-between px-4 py-3">
+        <!-- Logo -->
+        <img id="logoIcon" class="h-10 w-auto" src="/images/black.png" alt="Logo" />
+        <a href="#" class="text-2xl font-bold">Infinity</a>
+        <button
+            id="navbarToggler"
+            class="flex flex-col justify-center items-center w-10 h-10 bg-transparent border-none cursor-pointer focus:outline-none z-30"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="bar block w-6 h-[2px] bg-black transition-transform"></span>
+            <span class="bar block w-6 h-[2px] bg-black transition-opacity my-[3px]"></span>
+            <span class="bar block w-6 h-[2px] bg-black transition-transform"></span>
+        </button>
+    </div>
+
+    <!-- Collapsible Menu -->
+    <div
+        id="navbarNav"
+        class="absolute top-0 left-0 right-0 h-screen bg-gray-800 flex items-center justify-center transform -translate-y-full opacity-0 transition-transform duration-300 ease-in-out pointer-events-none z-10"
+    >
+        <ul class="flex flex-col items-center space-y-4 text-white text-lg text-center">
+            <li class="w-full border-b border-gray-500 py-2">
+                <a href="index.html" class="hover:text-green-400">Home</a>
+            </li>
+            <li class="w-full border-b border-gray-500 py-2">
+                <a href="about.html" class="hover:text-green-400">About Us</a>
+            </li>
+            <li class="w-full border-b border-gray-500 py-2">
+                <a href="services.html" class="hover:text-green-400">Services </a>
+            </li>
+            <li class="w-full border-b border-gray-500 py-2">
+                <a href="contact.html" class="hover:text-green-400">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<main>
+    
+</main>
+<!-- JavaScript to Toggle the Navbar -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggler = document.getElementById('navbarToggler');
+        const navbar = document.getElementById('navbarNav');
+
+        // Toggle the menu visibility and the hamburger animation
+        toggler.addEventListener('click', function () {
+            toggler.classList.toggle('toggle-active');
+            navbar.classList.toggle('-translate-y-full');
+            navbar.classList.toggle('opacity-0');
+            navbar.classList.toggle('pointer-events-none');
+
+            // Toggle bar animations
+            const bars = toggler.querySelectorAll('.bar');
+            bars[0].classList.toggle('rotate-45');
+            bars[0].classList.toggle('translate-y-1.5');
+
+            bars[1].classList.toggle('opacity-0');
+
+            bars[2].classList.toggle('-rotate-45');
+            bars[2].classList.toggle('-translate-y-1.5');
+        });
+    });
+</script>
+<footer class="bg-white">
+    <div class="container px-4 mx-auto">
+      <div class="pt-24 pb-11 mx-auto max-w-4xl"><a class="block md:mx-auto mb-5 max-w-max" href="#">
+        <img src="images/logo_color.png" alt="Logo" width="175" height="40">
+
+        </a>
+        <div class="flex flex-wrap justify-center -mx-3 lg:-mx-6">
+          <div class="w-full md:w-auto p-3 md:px-6"><a href="index.html"
+              class="inline-block text-lg text-gray-500 hover:text-gray-600 font-medium">Home</a>
+          </div>
+          <div class="w-full md:w-auto p-3 md:px-6"><a
+            class="inline-block text-lg text-gray-500 hover:text-gray-600 font-medium" href="about.html">About US</a>
+        </div>
+                  <div class="w-full md:w-auto p-3 md:px-6"><a
+            class="inline-block text-lg text-gray-500 hover:text-gray-600 font-medium" href="services.html">Services</a>
+        </div>
+          <div class="w-full md:w-auto p-3 md:px-6"><a
+              class="inline-block text-lg text-gray-500 hover:text-gray-600 font-medium" href="contact.html">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-b border-gray-100"></div>
+    <div class="container px-4 mx-auto">
+      <p class="py-10 md:pb-20 text-md text-gray-400 font-medium text-center">
+        © 2024 Infinity Creative Studio 
+        All rights reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
