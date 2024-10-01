@@ -11,9 +11,17 @@ module.exports = {
     files: ['./src/*.{html,js}'],
   },
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'color1': '#40A8BF',
+        'color2': '#6A3DC4',
+        'color3': '#C43D5D',
+        'color4': '#53E387',
+      },
+    },
   },
   plugins: [
-    require('taos/plugin')
+    require('taos/plugin'),
+    require('@tailwindcss/line-clamp'),
   ],
 }
