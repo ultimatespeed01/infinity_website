@@ -1,0 +1,46 @@
+.cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff007a, #00d4ff, #00ff85, #ffcc00);
+    pointer-events: none; /* Prevent the cursor from blocking interactions */
+    transition: background 0.5s;
+    z-index: 50;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.glitter {
+    position: absolute;
+    pointer-events: none; /* Prevent the glitter from blocking interactions */
+    opacity: 1;
+    z-index: 50;
+    transition: opacity 0.5s ease-in-out, transform 0.5s; /* Smooth fading and transformation */
+
+    /* Appearance of the streak */
+    width: 2px; /* Narrow width to create a streak-like appearance */
+    height: 40px; /* Longer height to stretch it into a streak */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 215, 0, 0.4), transparent);
+    
+    /* Add motion blur effect for more realism */
+    filter: blur(1px);
+
+    /* Randomly rotate the streak for variation */
+    transform: rotate(${Math.random() * 360}deg);
+    
+    /* Add a glowing effect */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 215, 0, 0.8);
+
+    animation: streak 1s forwards; /* Animation for shimmering effect */
+}
+
+@keyframes streak {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-40px) scale(0.5); /* Make the streak move upwards */
+        opacity: 0; /* Fade out */
+    }
+}
