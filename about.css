@@ -1,0 +1,247 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Poppins, sans-serif;
+    color: #f0f0f0;
+}
+
+body .cursor{
+    min-height: 100vh;
+    background: #0b0d15;
+    color: #a2a5b3;
+    align-content: center;
+}
+
+h1 {
+    color: white;
+}
+
+.about-us-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em;
+}
+
+.about-us-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    display: flex; /* Ensure flex display for card alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Start from the top */
+    min-height: 200px; /* Set a minimum height */
+    width: calc(33.33% - 20px); /* Ensure three cards per row with gap */
+    margin: 10px; /* Adjust margin to provide space between cards */
+    position: relative; /* Position for pseudo-elements */
+    border-radius: 10px;
+    padding: 0; /* Remove padding for the card to fit inner card */
+    animation: float 3s ease-in-out infinite; /* Apply floating animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow on hover */
+}
+
+.innercard h3 {
+    font-size: 1.7rem; /* Adjust font size as needed */
+    font-weight: bolder; /* Makes the text bolder */
+}
+.innercard p {
+    text-align: justify; /* Justify text */
+    margin: 0; /* Remove default margin */
+    line-height: 1.5; /* Adjust line height for better readability */
+}
+
+
+/* Conic gradient border */
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.card::after,
+.card::before {
+    content: '';
+    position: absolute;
+    height: calc(100% + 10px); /* Slightly larger to show border */
+    width: calc(100% + 10px); /* Slightly larger to show border */
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Corrected transform syntax */
+    z-index: -1; /* Place behind the inner card */
+    padding: 5px; /* Thickness of the border */
+    border-radius: 10px; /* Match card's border radius */
+    animation: 3s spin linear infinite; /* Spin animation */
+}
+
+.card::before {
+    filter: blur(2rem); /* Increased blur effect */
+    opacity: 0.8; /* Slightly more opaque */
+}
+
+/* Inner card with dark purple background */
+.inner-card {
+    background-color: #250821; /* Dark purple background */
+    color: #f5f5f5; /* Text color */
+    border-radius: 10px; /* Curved corners */
+    padding: 1em; /* Padding for inner card */
+    position: relative; /* Ensure it is above the outer border */
+    z-index: 1; /* Place above the border */
+    flex-grow: 1; /* Allow inner card to take up remaining space */
+}
+
+.card .inner-card .h3 {
+    font-size: 100px;
+}
+.btn{
+	padding:20px 100px;
+	background-color:rgba(255,255,255,0.10);
+	color:whitesmoke;
+	border-radius:40px;
+	position:relative;
+	border:none;
+	font-size:1rem;
+	cursor:pointer;
+}
+
+.btn:hover{
+	background:linear-gradient(90deg,#08ff08,#50e3fc,#bc13fe,#03a9f4,#0ff0fc);
+	background-size: 500%;
+	z-index:1;
+	animation:blink 7s linear infinite;
+}
+
+@keyframes blink{
+	from{
+		background-position: 0%;
+	}
+
+	to{
+		background-position: 500%;
+	}
+}
+
+.btn:after{
+	content:"";
+	position:absolute;
+	left:-10px;
+	right:-10px;
+	top:-10px;
+	bottom:-10px;
+	background: inherit;
+	border-radius:40px;
+	filter:blur(50px);
+	opacity:0;
+}
+.btn:hover::after{
+	opacity:1;
+	z-index:-1;
+}
+
+
+/* Keyframes for the spin animation */
+@keyframes spin {
+    from {
+        --angle: 0deg; /* Start angle */
+    }
+    to {
+        --angle: 360deg; /* End angle */
+    }
+}
+
+/* Keyframes for the floating effect */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Start and end position */
+    }
+    50% {
+        transform: translateY(-10px); /* Float up */
+    }
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-20px); /* Move up more on hover */
+    animation: none; /* Disable floating animation while hovered */
+    box-shadow: 0 0 20px 5px rgba(0, 255, 255, 0.7); /* Added glowing shadow effect */
+}
+
+.title-card {
+    margin-top: 80px; /* Adjust this value as needed */
+    margin: 8em auto; /* Increase margin to create more space above the card */
+    width: 80%; /* Card width */
+    max-width: 600px; /* Max width for larger screens */
+    position: relative; /* Position for pseudo-elements */
+    border-radius: 10px; /* Rounded corners */
+    padding: 3em; /* Inner padding */
+    background-color: #250821; /* Background color */
+    color: rgba(255, 255, 255, 0.9); /* Text color */
+    text-align: center; /* Center the text */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    animation: float 3s ease-in-out infinite; /* Apply floating animation */
+    transition: transform 0.3s ease; /* Smooth transition for transform on hover */
+}
+
+/* Pseudo-elements for border effect */
+.title-card::before,
+.title-card::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from 0deg, #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1; /* Place behind the inner card */
+    padding: 5px; /* Thickness of the border */
+    border-radius: 10px; /* Match card's border radius */
+    animation: 3s spin linear infinite; /* Spin animation */
+}
+
+.title-card::before {
+    filter: blur(1.5rem); /* Blur effect */
+    opacity: 0.5; /* Slightly transparent */
+}
+
+/* Keyframes for the floating effect */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Start and end position */
+    }
+    50% {
+        transform: translateY(-10px); /* Float up */
+    }
+}
+
+/* Hover effect */
+.title-card:hover {
+    transform: translateY(-10px); /* Move up more on hover */
+    animation: none; /* Disable floating animation while hovered */
+}
+
+/* Keyframes for scroll animation */
+@keyframes scrollFadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(20px); /* Start slightly lower */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+        transform: translateY(0); /* End at the original position */
+    }
+}
+
+/* Scroll animation class */
+.scroll-animation {
+    opacity: 0; /* Initially hidden */
+    animation: scrollFadeIn 0.6s forwards; /* Apply the animation */
+}

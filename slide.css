@@ -1,37 +1,37 @@
 @keyframes slide {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+  from {
+    transform: translateX(0);
   }
+  to {
+    transform: translateX(-50%); /* Change to -50% to match the duplicated logos */
+  }
+}
 
-  .animate-slide {
-    animation: slide 35s infinite linear;
-  }
+.animate-slide {
+  animation: slide 35s infinite linear; /* Adjust timing as needed */
+}
 
-  .slide:before,
-  .slide:after {
-    position: absolute;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    content: "";
-    z-index: 2;
-  }
+.slide:before,
+.slide:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
 
-  .slide:before {
-    left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(21, 1, 17));
-  }
+.slide:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(21, 1, 17));
+}
 
-  .slide:after {
-    right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(50, 44, 44));
-  }
+.slide:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(50, 44, 44));
+}
 
-  /* Pause animation on hover */
-  .slide:hover .company-slide {
-    animation-play-state: paused;
-  }
+/* Pause animation on hover */
+.slide:hover .company-slide {
+  animation-play-state: paused;
+}
