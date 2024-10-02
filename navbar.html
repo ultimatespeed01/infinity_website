@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Infinity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Services</title>
+    <link rel="stylesheet" href="nav.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="description" content="Infy Studio provides top-notch digital solutions like Web Design, SEO, Social Media Marketing, and Influencer Marketing.">
+    <meta name="keywords" content="Web Design, SEO, Social Media Marketing, Influencer Marketing, Digital Solutions">
+    <meta name="author" content="Infy Studio">
+</head>
+<body>
+    <nav class="fixed top-0 left-0 right-0 bg-gray-950 shadow z-20 w-full">
+        <div class="container mx-auto flex items-center justify-between px-4 py-3 flex-wrap w-full">
+            <!-- Logo -->
+            <img id="logoIcon" class="h-16 w-auto" src="images/logo.png" alt="Logo" />
+            <a href="#" class="text-2xl font-bold text-white">INFY</a>
+            <button id="navbarToggler" class="flex flex-col justify-center items-center w-10 h-10 bg-transparent border-none cursor-pointer focus:outline-none z-30" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="bar block w-6 h-[2px] bg-white transition-transform"></span>
+                <span class="bar block w-6 h-[2px] bg-white transition-opacity my-[3px]"></span>
+                <span class="bar block w-6 h-[2px] bg-white transition-transform"></span>
+            </button>
+        </div>
+
+        <!-- The navigation menu -->
+        <div id="navbarNav" class="absolute top-0 left-0 right-0 h-screen bg-gray-950 flex items-center justify-center transform -translate-y-full opacity-0 transition-transform duration-300 ease-in-out pointer-events-none z-10">
+            <ul class="flex flex-col items-center space-y-4 text-white text-lg text-center w-full">
+                <li class="w-full border-b border-gray-500 py-2">
+                    <a href="index.html" class="hover:text-blue-400">Home</a>
+                </li>
+                <li class="w-full border-b border-gray-500 py-2">
+                    <a href="about.html" class="hover:text-blue-400">About Us</a>
+                </li>
+                <li class="w-full border-b border-gray-500 py-2">
+                    <a href="services.html" class="hover:text-blue-400">Services</a>
+                </li>
+                <li class="w-full border-b border-gray-500 py-2">
+                    <a href="contact.html" class="hover:text-blue-400">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+    <!-- Page content goes here -->
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggler = document.getElementById('navbarToggler');
+            const navbar = document.getElementById('navbarNav');
+
+            // Toggle the menu visibility and the hamburger animation
+            toggler.addEventListener('click', function () {
+                // Toggle the navbar visibility classes
+                navbar.classList.toggle('translate-y-0');
+                navbar.classList.toggle('opacity-100');
+                navbar.classList.toggle('pointer-events-none');
+
+                // Toggle bar animations
+                const bars = toggler.querySelectorAll('.bar');
+                bars[0].classList.toggle('rotate-45');
+                bars[0].classList.toggle('translate-y-2');
+
+                bars[1].classList.toggle('opacity-0');
+
+                bars[2].classList.toggle('-rotate-45');
+                bars[2].classList.toggle('-translate-y-2');
+            });
+        });
+    </script>
+</body>
+</html>
